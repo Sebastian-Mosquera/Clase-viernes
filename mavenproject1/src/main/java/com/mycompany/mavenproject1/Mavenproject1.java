@@ -1,16 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.mavenproject1;
 
-/**
- *
- * @author SCIS2PC11
- */
+
 public class Mavenproject1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Character Homero = new Character("Homero", "Inspector de seguridad", 33 , "douuuuuuuu");
+        Homero.greeting();
+        System.out.println(Homero.age);
+        
+        Character bart = new Character("bartolomeo", "vago", 10, "Ay caramba");
+        bart.greeting();
+    }
+    
+    static class Character {
+        String name;
+        String occupation;
+        int age;
+        String phrase;
+        
+        Character(String name, String job, int age, String phrase){
+            this.name = name;
+            this.occupation = occupation;
+            this.age = age;
+            this.phrase = phrase;
+           
+            
+        }
+        void greeting(){
+            System.out.println(this.phrase);
+        }
     }
 }
